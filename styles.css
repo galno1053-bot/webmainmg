@@ -214,7 +214,7 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
 .section.alt{background:#f7faf8}
 .section h2{font-size:1.8rem;margin:0 0 20px;font-family:'PPMori-SemiBold', 'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;font-weight:600 !important}
 
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px}
 .feature{border:1px solid #e2ebe5;border-radius:16px;padding:16px;background:#fff}
 .feature .icon{width:36px;height:36px;border-radius:8px;background:linear-gradient(180deg,var(--plasma),var(--plasma-2));display:flex;align-items:center;justify-content:center;color:white}
 .feature h3{font-family:'PPMori-SemiBold', 'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;font-weight:600 !important}
