@@ -499,7 +499,7 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
 /* Mobile Navigation */
 .mobile-nav {
   position: fixed;
-  top: 0;
+  top: 85px; /* Start below header */
   left: 0;
   right: 0;
   width: 100%;
@@ -510,7 +510,7 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: calc(100vh - 85px);
   visibility: hidden;
 }
 
@@ -523,10 +523,10 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
 /* Mobile Menu Backdrop */
 .mobile-nav-backdrop {
   position: fixed;
-  top: 0;
+  top: 85px; /* Start below header */
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 85px); /* Cover area below header */
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
   opacity: 0;
