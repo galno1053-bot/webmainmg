@@ -4,7 +4,15 @@
 @font-face {
   font-family: 'PPMori-Regular';
   src: url('assets/font/PPMori-Regular.otf') format('opentype');
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPMori-Regular';
+  src: url('./assets/font/PPMori-Regular.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -27,9 +35,11 @@
 html,body{margin:0;padding:0}
 *{
   font-family:'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  font-weight: 400 !important;
 }
 body{
   font-family:'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 400;
   color:var(--ink);
   background:var(--paper);
   line-height:1.6;
