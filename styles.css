@@ -86,13 +86,17 @@ body{
   filter: drop-shadow(0 4px 12px rgba(0, 255, 133, 0.3));
 }
 
-/* Navigation */
+/* Navigation and CTA Section */
+.nav-cta-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .navigation {
   display: flex;
   align-items: center;
-  gap: 32px;
-  flex: 1;
-  justify-content: center;
+  gap: 24px;
 }
 
 .nav-link {
@@ -123,10 +127,6 @@ body{
   width: 100%;
 }
 
-/* CTA Section */
-.cta-section {
-  flex-shrink: 0;
-}
 
 .cta-button {
   background: linear-gradient(135deg, var(--plasma), var(--plasma-2));
