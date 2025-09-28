@@ -51,8 +51,8 @@ body{
 }
 .site-header .brand{font-weight:800;letter-spacing:.2px;margin-left:12px}
 
-.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:176px; height:176px; display:block; flex-shrink:0}
-.brand-link{display:inline-flex;align-items:center; text-decoration:none; min-width:176px}
+.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:176px; height:176px; display:block; flex-shrink:0; max-width:120px; max-height:120px; object-fit:contain}
+.brand-link{display:inline-flex;align-items:center; text-decoration:none; min-width:120px}
 
 /* remove old badge spacing if badge removed */
 .logo-wrap .badge{display:none}
@@ -61,7 +61,7 @@ body{
 .site-header .container{
   padding-left:16px;padding-right:16px;
   display:grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto auto 1fr;
   align-items:center;
   gap:20px;
   max-width:1152px;
