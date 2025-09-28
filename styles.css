@@ -499,21 +499,22 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
 /* Mobile Navigation */
 .mobile-nav {
   position: fixed;
-  top: 0;
-  right: -100%;
-  width: 280px;
-  height: 100vh;
+  top: -100%;
+  left: 0;
+  right: 0;
+  width: 100%;
   background: white;
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   z-index: 1000;
-  transition: right 0.3s ease;
+  transition: top 0.3s ease;
   overflow-y: auto;
   display: none;
+  max-height: 80vh;
 }
 
 .mobile-nav.active {
   display: block;
-  right: 0;
+  top: 0;
 }
 
 /* Mobile Menu Backdrop */
@@ -558,6 +559,7 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   cursor: pointer;
   color: #6b7280;
   transition: all 0.2s ease;
+  z-index: 1001;
 }
 
 .mobile-nav-close:hover {
