@@ -51,21 +51,29 @@ body{
 }
 .site-header .brand{font-weight:800;letter-spacing:.2px;margin-left:12px}
 
-.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:56px; height:56px; display:block}
-.brand-link{display:inline-flex;align-items:center; text-decoration:none}
+.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:56px; height:56px; display:block; flex-shrink:0}
+.brand-link{display:inline-flex;align-items:center; text-decoration:none; min-width:56px}
 
 /* remove old badge spacing if badge removed */
 .logo-wrap .badge{display:none}
 
-/* ensure header content doesn't feel cramped on small screens */
-.site-header .container{padding-left:16px;padding-right:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+/* Header container using grid for proper layout */
+.site-header .container{
+  padding-left:16px;padding-right:16px;
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center;
+  gap:20px;
+  max-width:1152px;
+  margin:auto;
+}
 
 /* Header sections */
-.header-left{display:flex;align-items:center;flex:0 0 auto}
-.header-right{display:flex;align-items:center;gap:18px;flex:0 0 auto}
+.header-left{display:flex;align-items:center;justify-content:flex-start}
+.header-right{display:flex;align-items:center;justify-content:flex-end;gap:18px}
 
 /* Center navigation */
-.nav{display:flex;align-items:center;position:absolute;left:50%;transform:translateX(-50%);z-index:10}
+.nav{display:flex;align-items:center;justify-content:center}
 .nav a{margin:0 12px;color:#14181b;text-decoration:none;font-weight:600;white-space:nowrap}
 .nav a:hover{color:#000}
 
@@ -198,6 +206,10 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   .hide-on-mobile{ display:none !important; }
   .show-on-mobile{ display:inline-flex; }
   .site-header{ border-bottom:1px solid #eef1f2; }
-  /* Center navigation on mobile when hidden */
-  .nav{ position:static; transform:none; }
+  /* Mobile header layout */
+  .site-header .container{
+    grid-template-columns: auto 1fr auto;
+    gap:10px;
+  }
+  .nav{ display:none; }
 }
