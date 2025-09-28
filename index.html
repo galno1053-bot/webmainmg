@@ -17,30 +17,33 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="container row between center">
+    <div class="container">
       <div class="row center logo-wrap">
-        <img src="assets/logo.svg" class="logo" alt="Plasmatic logo" width="28" height="28">
-        <strong class="brand">Plasmatic</strong>
-        <span class="badge">Main Site</span>
+        <a href="/" class="brand-link" aria-label="Plasmatic home">
+          <img src="assets/logo.svg" class="logo" alt="Plasmatic logo" width="36" height="36">
+        </a>
       </div>
 
-      <!-- Desktop nav -->
-      <nav class="nav hide-on-mobile">
-        <a href="#features">Features</a>
-        <a href="#solutions">Solutions</a>
-        <a href="docs/" rel="nofollow">Docs</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <!-- Right side: nav + actions + mobile button grouped together -->
+      <div class="header-right">
+        <!-- Desktop nav -->
+        <nav class="nav hide-on-mobile">
+          <a href="#features">Features</a>
+          <a href="#solutions">Solutions</a>
+          <a href="docs/" rel="nofollow">Docs</a>
+          <a href="#faq">FAQ</a>
+        </nav>
 
-      <!-- Desktop actions -->
-      <div class="row gap-sm hide-on-mobile">
-        <a class="btn solid" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch Web App</a>
+        <!-- Desktop actions -->
+        <div class="row gap-sm hide-on-mobile">
+          <a class="btn solid" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch Web App</a>
+        </div>
+
+        <!-- Mobile: menu button only -->
+        <button id="menuToggle" class="menu-toggle show-on-mobile" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          ☰
+        </button>
       </div>
-
-      <!-- Mobile: menu button only -->
-      <button id="menuToggle" class="menu-toggle show-on-mobile" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-        ☰
-      </button>
     </div>
 
     <!-- Offcanvas mobile menu -->
@@ -62,6 +65,7 @@
     </div>
     </div>
   </header>
+
 
   <main id="main">
     <section class="hero">
@@ -151,10 +155,8 @@
   <footer class="site-footer">
     <div class="container row between top">
       <div>
-        <div class="row center logo-wrap">
-          <img src="assets/logo.svg" class="logo" alt="Plasmatic logo" width="24" height="24">
-          <strong class="brand">Plasmatic is the all-in-one on Plasma Network.</strong>
-        </div>
+    </header>
+ 
         <p class="muted">© <span id="year"></span> Plasmatic. All rights reserved.</p>
       </div>
       <div class="footer-links">
