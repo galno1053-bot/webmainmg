@@ -19,8 +19,14 @@ if (status){
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileNav = document.getElementById('mobile-nav');
 
+  console.log('Mobile menu elements:', { mobileMenuBtn, mobileNav });
+
   function toggleMobileMenu() {
-    if (!mobileMenuBtn || !mobileNav) return;
+    console.log('Toggle mobile menu clicked');
+    if (!mobileMenuBtn || !mobileNav) {
+      console.log('Mobile menu elements not found');
+      return;
+    }
     
     const isActive = mobileNav.classList.contains('active');
     
@@ -46,7 +52,10 @@ if (status){
 
   // Event listeners
   if (mobileMenuBtn) {
+    console.log('Adding click event listener to mobile menu button');
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+  } else {
+    console.log('Mobile menu button not found');
   }
 
   // Close menu when clicking on nav links
