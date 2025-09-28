@@ -51,8 +51,8 @@ body{
 }
 .site-header .brand{font-weight:800;letter-spacing:.2px;margin-left:12px}
 
-.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:88px; height:88px; display:block; flex-shrink:0}
-.brand-link{display:inline-flex;align-items:center; text-decoration:none; min-width:88px}
+.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:176px; height:176px; display:block; flex-shrink:0}
+.brand-link{display:inline-flex;align-items:center; text-decoration:none; min-width:176px}
 
 /* remove old badge spacing if badge removed */
 .logo-wrap .badge{display:none}
