@@ -51,8 +51,8 @@ body{
 }
 .site-header .brand{font-weight:800;letter-spacing:.2px;margin-left:12px}
 
-.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:56px; height:56px}
-.brand-link{display:inline-flex;align-items:center}
+.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:56px; height:56px; display:block}
+.brand-link{display:inline-flex;align-items:center; text-decoration:none}
 
 /* remove old badge spacing if badge removed */
 .logo-wrap .badge{display:none}
@@ -61,12 +61,12 @@ body{
 .site-header .container{padding-left:16px;padding-right:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
 
 /* Header sections */
-.header-left{display:flex;align-items:center}
-.header-right{display:flex;align-items:center;gap:18px}
+.header-left{display:flex;align-items:center;flex:0 0 auto}
+.header-right{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 
 /* Center navigation */
-.nav{display:flex;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
-.nav a{margin:0 12px;color:#14181b;text-decoration:none;font-weight:600}
+.nav{display:flex;align-items:center;position:absolute;left:50%;transform:translateX(-50%);z-index:10}
+.nav a{margin:0 12px;color:#14181b;text-decoration:none;font-weight:600;white-space:nowrap}
 .nav a:hover{color:#000}
 
 /* make sure logo group stays left and doesn't center on narrow containers */
