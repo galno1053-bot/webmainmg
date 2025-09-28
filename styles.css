@@ -305,8 +305,16 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   font-family: 'PPMori-SemiBold', 'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
   font-weight: 600 !important;
   font-size: 2rem;
-  margin: 0 0 32px;
+  margin: 0 0 8px;
   color: #1f2937;
+  text-align: left;
+}
+
+.faq-subtitle {
+  font-family: 'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0 0 32px;
   text-align: left;
 }
 
