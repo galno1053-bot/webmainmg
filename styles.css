@@ -45,8 +45,9 @@ body{
   background:rgba(255,255,255,.95);
   backdrop-filter:saturate(140%) blur(8px);
   border-bottom:1px solid #eef1f2;
-  /* compact header height */
-  min-height:60px;
+  /* make header height 2x smaller */
+  min-height:30px;
+  padding:6px 0;
   display:flex; align-items:center;
 }
 .site-header .brand{font-weight:800;letter-spacing:.2px;margin-left:12px}
