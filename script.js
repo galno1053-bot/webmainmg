@@ -40,6 +40,10 @@ if (status){
       mobileNav.classList.add('active');
       mobileMenuBtn.classList.add('active');
       document.body.style.overflow = 'hidden';
+      console.log('Menu opened, classes added:', {
+        mobileNavClasses: mobileNav.className,
+        mobileMenuBtnClasses: mobileMenuBtn.className
+      });
     }
   }
 

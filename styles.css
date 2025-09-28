@@ -510,7 +510,8 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
 }
 
 .mobile-nav.active {
-  display: block;
+  display: block !important;
+  border: 3px solid red !important; /* Debug border */
 }
 
 .mobile-nav-content {
