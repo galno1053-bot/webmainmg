@@ -88,3 +88,31 @@ if (status){
     }
   });
 })();
+
+// --- Smooth Scroll Navigation ---
+(function(){
+  // Get all navigation links that point to sections
+  const navLinks = document.querySelectorAll('a[href^="#"]');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      
+      const targetId = this.getAttribute('href').substring(1); // Remove #
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        // Calculate offset for fixed header if any
+        const headerOffset = 80; // Adjust this value based on your header height
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        // Smooth scroll to target
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+})();
