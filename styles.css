@@ -212,7 +212,7 @@ body{
 .accent{color:var(--accent);text-shadow:0 0 15px rgba(125,0,204,0.5)}
 .lede{font-size:1.1rem;color:#d0d0e0;max-width:60ch;font-family:'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important}
 .cta{margin:22px 0}
-.hero-image{display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.hero-image{display:flex;align-items:center;justify-content:center;position:relative;z-index:1;margin-left:20px}
 .hero-img{width:100%;height:auto;max-width:100%;object-fit:contain}
 
 .glass{background:linear-gradient(180deg,#0e1411,#0b0d0f); color:var(--text);
