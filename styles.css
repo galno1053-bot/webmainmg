@@ -96,16 +96,6 @@ body{
   flex-shrink: 0;
 }
 
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-.logo-link:hover {
-  transform: scale(1.05);
-}
 
 .logo-img {
   width: 144px;
