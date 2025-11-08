@@ -713,7 +713,7 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   
   /* Adjust logo position for mobile - align to left edge */
   .logo-section {
-    margin-left: -4px;
+    margin-left: -8px;
   }
   
   /* Adjust logo size for mobile */
