@@ -26,6 +26,7 @@
       <!-- Navigation and CTA Button -->
       <div class="nav-cta-section">
         <nav class="navigation">
+          <a href="#nadz-token" class="nav-link">Nadz Token</a>
           <a href="#features" class="nav-link">Features</a>
           <a href="#solutions" class="nav-link">Solutions</a>
           <a href="https://docs.nadz.tools/" class="nav-link" target="_blank" rel="noopener">Docs</a>
@@ -53,6 +54,7 @@
   <div class="mobile-nav" id="mobile-nav">
     <div class="mobile-nav-content">
       <div class="mobile-nav-links">
+        <a href="#nadz-token" class="nav-link">Nadz Token</a>
         <a href="#features" class="nav-link">Features</a>
         <a href="#solutions" class="nav-link">Solutions</a>
         <a href="https://docs.nadz.tools/" class="nav-link" target="_blank" rel="noopener">Docs</a>
@@ -84,6 +86,48 @@
         </div>
         <div class="hero-image">
           <img src="assets/Nadz-3D.png" alt="Nadz Tools 3D" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <section id="nadz-token" class="section alt">
+      <div class="container">
+        <div class="nadz-token-header">
+          <h2>Nadz Token</h2>
+          <p class="nadz-token-description">The native token powering the Nadz Tools ecosystem on Monad Network.</p>
+        </div>
+        
+        <div class="nadz-token-content">
+          <div class="nadz-token-info">
+            <div class="contract-address-card">
+              <h3>Contract Address</h3>
+              <div class="contract-address-wrapper">
+                <code class="contract-address" id="contract-address">0x0000000000000000000000000000000000000000</code>
+                <button class="copy-btn" id="copy-btn" title="Copy address">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            <div class="nadz-token-actions">
+              <a href="#" class="btn solid lg" id="buy-btn" target="_blank" rel="noopener">Buy Nadz Token</a>
+            </div>
+          </div>
+          
+          <div class="nadz-token-chart">
+            <h3>Price Chart</h3>
+            <div class="chart-container">
+              <iframe 
+                id="dexscreener-embed" 
+                title="DEXScreener Chart" 
+                src="https://dexscreener.com/monad/0x0000000000000000000000000000000000000000?embed=1&theme=dark&trades=0&info=0"
+                style="width:100%;height:500px;border:none;border-radius:12px;">
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </section>

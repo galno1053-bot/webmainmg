@@ -130,3 +130,51 @@ if (status){
     });
   });
 })();
+
+// --- Copy Contract Address ---
+(function(){
+  const copyBtn = document.getElementById('copy-btn');
+  const contractAddress = document.getElementById('contract-address');
+  
+  if (copyBtn && contractAddress) {
+    copyBtn.addEventListener('click', async function() {
+      const address = contractAddress.textContent;
+      
+      try {
+        await navigator.clipboard.writeText(address);
+        
+        // Visual feedback
+        const originalHTML = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+        copyBtn.style.background = 'rgba(125,0,204,0.8)';
+        
+        setTimeout(() => {
+          copyBtn.innerHTML = originalHTML;
+          copyBtn.style.background = '';
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = address;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand('copy');
+          const originalHTML = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+          copyBtn.style.background = 'rgba(125,0,204,0.8)';
+          setTimeout(() => {
+            copyBtn.innerHTML = originalHTML;
+            copyBtn.style.background = '';
+          }, 2000);
+        } catch (fallbackErr) {
+          console.error('Fallback copy failed:', fallbackErr);
+        }
+        document.body.removeChild(textArea);
+      }
+    });
+  }
+})();
