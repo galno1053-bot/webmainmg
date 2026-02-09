@@ -223,6 +223,10 @@ body{
 .cta{margin:22px 0;justify-content:center}
 .hero-image{display:none}
 .hero-img{display:none}
+.desktop-break{display:none}
+@media (min-width: 960px){
+  .desktop-break{display:inline}
+}
 
 .glass{background:linear-gradient(180deg,#0f0f0f,#0b0b0b); color:var(--text);
   border:1px solid #1f1f1f;border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
