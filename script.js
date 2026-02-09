@@ -146,7 +146,7 @@ if (status){
         // Visual feedback
         const originalHTML = copyBtn.innerHTML;
         copyBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-        copyBtn.style.background = 'rgba(125,0,204,0.8)';
+        copyBtn.style.background = 'rgba(255,255,255,0.18)';
         
         setTimeout(() => {
           copyBtn.innerHTML = originalHTML;
@@ -165,7 +165,7 @@ if (status){
           document.execCommand('copy');
           const originalHTML = copyBtn.innerHTML;
           copyBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-          copyBtn.style.background = 'rgba(125,0,204,0.8)';
+          copyBtn.style.background = 'rgba(255,255,255,0.18)';
           setTimeout(() => {
             copyBtn.innerHTML = originalHTML;
             copyBtn.style.background = '';
