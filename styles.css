@@ -189,7 +189,7 @@ body{
    Hero
 =================== */
 .hero{
-  padding:120px 0 72px;
+  padding:160px 0 120px;
   background:
     radial-gradient(ellipse 100% 60% at 30% 40%, rgba(255,255,255,.10) 0%, transparent 65%),
     radial-gradient(ellipse 80% 50% at 70% 60%, rgba(255,255,255,.08) 0%, transparent 60%),
@@ -234,7 +234,7 @@ pre{margin:0;background:#0b0b0b;color:#f0f0f0;padding:16px;border-radius:12px;ov
 /* ===================
    Sections
 =================== */
-.section{padding:72px 0;position:relative}
+.section{padding:104px 0;position:relative}
 .section.alt{
   background:
     radial-gradient(ellipse 100% 40% at 50% 0%, rgba(255,255,255,0.06) 0%, transparent 60%),
