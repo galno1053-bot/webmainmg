@@ -189,7 +189,7 @@ body{
    Hero
 =================== */
 .hero{
-  padding:200px 0 160px;
+  padding:200px 0 240px;
   background:
     radial-gradient(ellipse 100% 60% at 30% 40%, rgba(255,255,255,.10) 0%, transparent 65%),
     radial-gradient(ellipse 80% 50% at 70% 60%, rgba(255,255,255,.08) 0%, transparent 60%),
