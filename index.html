@@ -11,6 +11,10 @@
   <meta property="og:image" content="assets/og-cover.png">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/favicon.svg">
+  <script>
+    window.APP_CONFIG = window.APP_CONFIG || {};
+    // Expect: CONTRACT_ADDRESS, BUY_URL, DEX_URL
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -99,7 +103,7 @@
             <div class="contract-address-card">
               <h3>Contract Address</h3>
               <div class="contract-address-wrapper">
-                <code class="contract-address" id="contract-address">0x96e88191f7356135f1b4AbB9fEf6D1813ffF7777</code>
+                <code class="contract-address" id="contract-address"></code>
                 <button class="copy-btn" id="copy-btn" title="Copy address">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -110,7 +114,7 @@
             </div>
             
             <div class="nadz-token-actions">
-              <a href="https://nad.fun/tokens/0x96e88191f7356135f1b4AbB9fEf6D1813ffF7777" class="btn solid lg" id="buy-btn" target="_blank" rel="noopener">Buy MegaLokify Token</a>
+              <a href="#" class="btn solid lg" id="buy-btn" target="_blank" rel="noopener">Buy MegaLokify Token</a>
             </div>
           </div>
           
@@ -120,8 +124,9 @@
               <iframe 
                 id="dexscreener-embed" 
                 title="DEXScreener Chart" 
-                src="https://dexscreener.com/megaeth/0x96e88191f7356135f1b4AbB9fEf6D1813ffF7777?embed=1&theme=dark&trades=0&info=0"
-                style="width:100%;height:500px;border:none;border-radius:12px;">
+                src=""
+                style="width:100%;height:500px;border:none;border-radius:12px;"
+                hidden>
               </iframe>
             </div>
           </div>

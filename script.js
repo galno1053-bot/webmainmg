@@ -131,50 +131,63 @@ if (status){
   });
 })();
 
-// --- Copy Contract Address ---
+// --- Runtime config for contract, buy link, dexscreener ---
 (function(){
+  const cfg = window.APP_CONFIG || {};
+  const contractAddressEl = document.getElementById('contract-address');
   const copyBtn = document.getElementById('copy-btn');
-  const contractAddress = document.getElementById('contract-address');
-  
-  if (copyBtn && contractAddress) {
+  const buyBtn = document.getElementById('buy-btn');
+  const dexFrame = document.getElementById('dexscreener-embed');
+
+  const contractAddress = cfg.CONTRACT_ADDRESS || '';
+  const buyUrl = cfg.BUY_URL || '';
+  const dexUrl = cfg.DEX_URL || '';
+
+  if (contractAddressEl){
+    contractAddressEl.textContent = contractAddress;
+    contractAddressEl.dataset.value = contractAddress;
+    const wrapper = contractAddressEl.closest('.contract-address-wrapper');
+    if (wrapper) wrapper.classList.toggle('is-empty', !contractAddress);
+    if (copyBtn) copyBtn.disabled = !contractAddress;
+  }
+
+  if (copyBtn && contractAddressEl){
     copyBtn.addEventListener('click', async function() {
-      const address = contractAddress.textContent;
-      
+      const address = contractAddressEl.dataset.value || '';
+      if (!address) return;
       try {
         await navigator.clipboard.writeText(address);
-        
-        // Visual feedback
         const originalHTML = copyBtn.innerHTML;
         copyBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
         copyBtn.style.background = 'rgba(255,255,255,0.18)';
-        
         setTimeout(() => {
           copyBtn.innerHTML = originalHTML;
           copyBtn.style.background = '';
         }, 2000);
       } catch (err) {
         console.error('Failed to copy:', err);
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = address;
-        textArea.style.position = 'fixed';
-        textArea.style.opacity = '0';
-        document.body.appendChild(textArea);
-        textArea.select();
-        try {
-          document.execCommand('copy');
-          const originalHTML = copyBtn.innerHTML;
-          copyBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-          copyBtn.style.background = 'rgba(255,255,255,0.18)';
-          setTimeout(() => {
-            copyBtn.innerHTML = originalHTML;
-            copyBtn.style.background = '';
-          }, 2000);
-        } catch (fallbackErr) {
-          console.error('Fallback copy failed:', fallbackErr);
-        }
-        document.body.removeChild(textArea);
       }
     });
+  }
+
+  if (buyBtn){
+    if (buyUrl){
+      buyBtn.href = buyUrl;
+      buyBtn.classList.remove('disabled-link');
+    } else {
+      buyBtn.href = '#';
+      buyBtn.classList.add('disabled-link');
+      buyBtn.setAttribute('aria-disabled','true');
+    }
+  }
+
+  if (dexFrame){
+    if (dexUrl){
+      dexFrame.src = dexUrl;
+      dexFrame.removeAttribute('hidden');
+    } else {
+      dexFrame.setAttribute('hidden','true');
+      dexFrame.removeAttribute('src');
+    }
   }
 })();
